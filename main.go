@@ -408,7 +408,7 @@ The log file is stored in $BITRISE_DEPLOY_DIR, and its full path is available in
 			fail("Failed to unset (%s), error: %s", key, err)
 		}
 	}
-
+	/*
 	archive, err := xcarchive.NewIosArchive(tmpArchivePath)
 	if err != nil {
 		fail("Failed to parse archive, error: %s", err)
@@ -428,7 +428,7 @@ The log file is stored in $BITRISE_DEPLOY_DIR, and its full path is available in
 	//
 	// Exporting the ipa with Xcode Command Line tools
 
-	/*
+
 		You'll get a "Error Domain=IDEDistributionErrorDomain Code=14 "No applicable devices found."" error
 		if $GEM_HOME is set and the project's directory includes a Gemfile - to fix this
 		we'll unset GEM_HOME as that's not required for xcodebuild anyway.
@@ -436,18 +436,18 @@ The log file is stored in $BITRISE_DEPLOY_DIR, and its full path is available in
 		See also:
 		- http://stackoverflow.com/questions/33041109/xcodebuild-no-applicable-devices-found-when-exporting-archive
 		- https://gist.github.com/claybridges/cea5d4afd24eda268164
-	*/
+
 	log.Infof("Exporting ipa from the archive...")
 	fmt.Println()
 
 	if xcodeMajorVersion <= 6 || cfg.UseDeprecatedExport == "yes" {
 		log.Printf("Using legacy export")
-		/*
+
 			Get the name of the profile which was used for creating the archive
 			--> Search for embedded.mobileprovision in the xcarchive.
 			It should contain a .app folder in the xcarchive folder
 			under the Products/Applications folder
-		*/
+
 
 		legacyExportCmd := xcodebuild.NewLegacyExportCommand()
 		legacyExportCmd.SetExportFormat("ipa")
@@ -937,5 +937,5 @@ is available in the $BITRISE_IDEDISTRIBUTION_LOGS_PATH environment variable`)
 		}
 
 		log.Donef("The dSYM zip path is now available in the Environment Variable: %s (value: %s)", bitriseDSYMPthEnvKey, dsymZipPath)
-	}
+	}*/
 }
