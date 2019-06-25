@@ -27,7 +27,7 @@ import (
 	"github.com/bitrise-io/go-xcode/xcarchive"
 	"github.com/bitrise-io/go-xcode/xcodebuild"
 	"github.com/bitrise-io/go-xcode/xcpretty"
-	"github.com/bitrise-steplib/steps-xcode-archive/utils"
+	"github.com/MyTestOrgBitrise/steps-xcode-archive/utils"
 	"github.com/kballard/go-shellquote"
 	"howett.net/plist"
 )
