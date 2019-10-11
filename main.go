@@ -852,7 +852,7 @@ is available in the $BITRISE_IDEDISTRIBUTION_LOGS_PATH environment variable`)
 
 	//
 	// Export outputs
-
+	*/
 	// Export .xcarchive
 	fmt.Println()
 
@@ -869,7 +869,7 @@ is available in the $BITRISE_IDEDISTRIBUTION_LOGS_PATH environment variable`)
 
 		log.Donef("The xcarchive zip path is now available in the Environment Variable: %s (value: %s)", bitriseXCArchiveZipPthEnvKey, archiveZipPath)
 	}
-
+	/*
 	// Export .app
 	fmt.Println()
 
