@@ -404,21 +404,21 @@ The log file is stored in $BITRISE_DEPLOY_DIR, and its full path is available in
 		}
 	}
 
-	archive, err := xcarchive.NewIosArchive(tmpArchivePath)
-	if err != nil {
-		fail("Failed to parse archive, error: %s", err)
-	}
+// 	archive, err := xcarchive.NewIosArchive(tmpArchivePath)
+// 	if err != nil {
+// 		fail("Failed to parse archive, error: %s", err)
+// 	}
 
-	mainApplication := archive.Application
-	archiveExportMethod := mainApplication.ProvisioningProfile.ExportType
-	archiveCodeSignIsXcodeManaged := profileutil.IsXcodeManaged(mainApplication.ProvisioningProfile.Name)
+// 	mainApplication := archive.Application
+// 	archiveExportMethod := mainApplication.ProvisioningProfile.ExportType
+// 	archiveCodeSignIsXcodeManaged := profileutil.IsXcodeManaged(mainApplication.ProvisioningProfile.Name)
 
-	log.Infof("Archive infos:")
-	log.Printf("team: %s (%s)", mainApplication.ProvisioningProfile.TeamName, mainApplication.ProvisioningProfile.TeamID)
-	log.Printf("profile: %s (%s)", mainApplication.ProvisioningProfile.Name, mainApplication.ProvisioningProfile.UUID)
-	log.Printf("export: %s", archiveExportMethod)
-	log.Printf("xcode managed profile: %v", archiveCodeSignIsXcodeManaged)
-	fmt.Println()
+// 	log.Infof("Archive infos:")
+// 	log.Printf("team: %s (%s)", mainApplication.ProvisioningProfile.TeamName, mainApplication.ProvisioningProfile.TeamID)
+// 	log.Printf("profile: %s (%s)", mainApplication.ProvisioningProfile.Name, mainApplication.ProvisioningProfile.UUID)
+// 	log.Printf("export: %s", archiveExportMethod)
+// 	log.Printf("xcode managed profile: %v", archiveCodeSignIsXcodeManaged)
+// 	fmt.Println()
 
 	//
 	// Exporting the ipa with Xcode Command Line tools
